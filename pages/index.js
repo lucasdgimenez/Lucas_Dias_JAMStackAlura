@@ -1,6 +1,8 @@
 import React from 'react';
 import Cabecalho from '../src/components/Cabecalho';
 import Capa from '../src/components/Capa';
+import Footer from '../src/components/Footer';
+import WrapperProjeos from '../src/components/WrapperProjetos';
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
     }}>
       <Capa/>
       <Cabecalho/>
+      <WrapperProjeos/>
+      <Footer/>
     </div>
   )
 }
