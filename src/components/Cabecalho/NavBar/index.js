@@ -30,12 +30,12 @@ export default function NavBar({opcoes}) {
   return (
     <NavBarBox>
       <OptionMenu 
-        href="https://globoesporte.globo.com/rj/futebol/campeonato-carioca/"
+        href="#"
       >
         {opcoes.about}
       </OptionMenu>
       <OptionMenu 
-        href="https://globoesporte.globo.com/rj/futebol/campeonato-carioca/"
+        href="#"
       >
         {opcoes.contact}
       </OptionMenu>
