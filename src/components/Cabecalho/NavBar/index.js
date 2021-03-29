@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const NavBarBox = styled.nav`
-  background-color: green;
+  background-color: #15702e;
   color: white;
   display: flex;
 `;
 
 const OptionMenu = styled.a`
+  color: white;
   font-style: normal;
   font-weight: normal;
   font-size: 28px; 

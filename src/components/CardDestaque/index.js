@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { CardTitle } from '../Card';
 
-const CardDestaqueContent = styled.section`
+const CardDestaqueContent = styled.a`
+  cursor: pointer;
   display: flex;
   justify-content: center;
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 30px;
-  border: 2px solid black;
+  border: 3px solid green;
+  margin-bottom: 20px;
   @media only screen and (max-width: 600px) {
     flex-direction: column;
     max-width: 380px;
@@ -20,14 +21,19 @@ export const CardImage = styled.div`
   flex: 2; 
   padding-top: 150px;
   padding-bottom: 150px;
-  background-image: url('/icons/capa1.jpg');
+  background-image: url('/icons/proj1.jpg');
   background-position: center;
   background-size: cover;
 `
 
 const CardText = styled.div`
   flex: 1;
-  background-color: #434;
+  color: white;
+  background-color: #15702e;
+  letter-spacing: 1px;
+  p {
+    text-align: left;
+  }
   @media only screen and (max-width: 600px) {
     background-color: transparent;
     p {
@@ -38,7 +44,10 @@ const CardText = styled.div`
 
 export default function CardDestaque({title, text}) {
   return (
-    <CardDestaqueContent>
+    <CardDestaqueContent
+      href="https://moneycontrol.vercel.app/"
+      target="_blank"
+    >
       <CardImage></CardImage>
       <CardText>
         <CardTitle>{title}</CardTitle>

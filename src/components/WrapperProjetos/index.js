@@ -5,7 +5,7 @@ import CardDestaque from '../CardDestaque';
 import SectionTitle from '../SectionTitle';
 
 const WrapperProj = styled.section`
-  background-color: #26353E;
+  background-color: #020d05;
   color: white;
 `
 
@@ -14,8 +14,9 @@ export default function WrapperProjeos() {
     <WrapperProj>
       <SectionTitle>Projetos</SectionTitle>
       <CardDestaque
-        title="Projeto Report"
-        text="aquele texto"
+        title="Money control"
+        text="Registre seus gastos, defina as categorias e tenha o controle
+        em suas mãos. Os dados permanecem salvos em seu navegador"
       />
       <div 
         style={{
@@ -27,16 +28,19 @@ export default function WrapperProjeos() {
         }}
       >
         <Card 
-          image="capa1"
-          title="Titulo 1"
+          image="dash"
+          title="Dashboard"
+          href="https://isoscq.vercel.app/#/dashboard"
         />
         <Card 
-          image="capa2"
-          title="Titulo 2"
+          image="wick"
+          title="VueFilmes"
+          href="https://vuemovies.vercel.app/"
         />
         <Card 
-          image="capa1"
-          title="Titulo 3"
+          image="instalura"
+          title="Instalura"
+          href="https://instalura-lucas.vercel.app/"
         />
       </div>
     

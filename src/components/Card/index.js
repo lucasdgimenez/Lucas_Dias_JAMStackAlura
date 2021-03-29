@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import {CardImage} from '../CardDestaque';
 
-const CardContent = styled.section`
+const CardContent = styled.a`
   margin-right: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: 2px solid black;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+  border: 3px solid green;
   @media only screen and (max-width: 600px) {
     width: 370px;
     img {
@@ -21,8 +22,8 @@ const CardContent = styled.section`
 `
 
 export const CardTitle = styled.h1`
+  background-color: #32A852;
   color: black;
-  background-color: white;
   text-align: center;
   font-style: normal;
   font-weight: bold;
@@ -39,13 +40,16 @@ export const CardTitle = styled.h1`
   }
 `
 
-export default function Card({image, title}) {
+export default function Card({image, title, href}) {
   return (
-    <CardContent>
+    <CardContent
+      href={href}
+      target="_blank"
+    >
       <CardImage 
         style={{
-          backgroundImage: 'url(/icons/capa1.jpg)',
-          backgroundPosition: 'center',
+          backgroundImage: `url(/icons/${image}.jpg)`,
+          backgroundPosition: 'left',
           backgroundSize: 'cover',
           paddingTop: '150px',
           paddingBottom: '150px',
@@ -56,7 +60,7 @@ export default function Card({image, title}) {
       </CardImage>
       <CardTitle>
         {title}
-      </CardTitle>    
+      </CardTitle>
     </CardContent>    
   );
 }
