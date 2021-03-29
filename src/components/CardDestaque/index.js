@@ -3,48 +3,47 @@ import styled from 'styled-components';
 import { CardTitle } from '../Card';
 
 const CardDestaqueContent = styled.section`
-  display: grid;
-  max-width: 880px;
-  margin: auto;
-  border: 3px solid black;
-  grid: 
-    "image image title" 6rem
-    "image image testando" 14rem
-  / 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 2px solid black;
   @media only screen and (max-width: 600px) {
-    background-color: pink;
+    flex-direction: column;
+    max-width: 380px;
+    order: 1;
   }
 `
 
-const CardText = styled.p`
-  background-color: white;
-  color: black;
-  grid-area: testando;
-  margin-top: -10px;
-`
-
-const CardImage = styled.div`
-  grid-area: image;
-  background-image: url('icons/capa1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+export const CardImage = styled.div`
+  flex: 2; 
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-image: url('/icons/capa1.jpg');
   background-position: center;
-  margin-right: 8px;
-
+  background-size: cover;
 `
 
-export default function CardDestaque({image, title}) {
+const CardText = styled.div`
+  flex: 1;
+  background-color: #434;
+  @media only screen and (max-width: 600px) {
+    background-color: transparent;
+    p {
+      display: none;
+    }
+  }
+`
+
+export default function CardDestaque({title, text}) {
   return (
     <CardDestaqueContent>
-      <CardImage>
-       
-      </CardImage>  
-      <CardTitle>
-        {title}
-      </CardTitle>
+      <CardImage></CardImage>
       <CardText>
-        Hahaha
+        <CardTitle>{title}</CardTitle>
+        <p>{text}</p>
       </CardText>
-    </CardDestaqueContent>    
+  </CardDestaqueContent>
   );
 }

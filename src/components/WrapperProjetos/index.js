@@ -5,15 +5,27 @@ import CardDestaque from '../CardDestaque';
 import SectionTitle from '../SectionTitle';
 
 const WrapperProj = styled.section`
-  background-color: orange;
-  color: black;
+  background-color: #26353E;
+  color: white;
 `
 
 export default function WrapperProjeos() {
   return (
     <WrapperProj>
-      <SectionTitle />
-      <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
+      <SectionTitle>Projetos</SectionTitle>
+      <CardDestaque
+        title="Projeto Report"
+        text="aquele texto"
+      />
+      <div 
+        style={{
+          display: 'flex', 
+          justifyContent: 'center', 
+          flexWrap: 'wrap',
+          maxWidth: '1000px',
+          margin: '0 auto'
+        }}
+      >
         <Card 
           image="capa1"
           title="Titulo 1"
@@ -27,10 +39,8 @@ export default function WrapperProjeos() {
           title="Titulo 3"
         />
       </div>
-      <CardDestaque
-        image="capa1"
-        title="Titulo 4"
-      />
+    
+      
     </WrapperProj>
   );
 }
