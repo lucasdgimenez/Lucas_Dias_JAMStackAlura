@@ -4,7 +4,7 @@ import Logo from './Logo';
 import NavBar from './NavBar';
 
 const Header = styled.header`
-  background-color: blue;
+  background-color: #32a852;
   display: flex;
   justify-content: space-around;
 `;

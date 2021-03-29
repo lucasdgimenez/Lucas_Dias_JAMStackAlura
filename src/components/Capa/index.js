@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CapaContainer = styled.section`
-  background-color: ${function({ theme }) { 
-    return theme.primary.main.color;
-  }};
+  background-color: #020d05;
   text-align: center;
   height: 40vh;
   display: flex;
@@ -15,19 +13,15 @@ const CapaContainer = styled.section`
 const Titulo = styled.h1`
   font-size: 3rem;
   font-family: 'Rubik';
-  color: ${function({ theme }) { 
-    return theme.secondary.main.color;
-  }};
-  background-color: blueviolet;
+  color: #32A852;
+  text-transform: uppercase;
 `
 
 const Subtitulo = styled.p`
   margin-top: -30px;
   font-size: 1.5rem;
-  color: ${function({ theme }) { 
-    return theme.secondary.main.color;
-  }};
-  background-color: pink;
+  color: #32A852;
+  text-transform: uppercase;
 `
 
 export default function Capa({titulo, subtitulo}) {
