@@ -8,6 +8,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: sans-serif;
   }
+  a {
+    text-decoration: none;
+  }
   li {
     list-style: none;
   }

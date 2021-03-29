@@ -37,4 +37,7 @@ export const theme = {
   modes: {
     dark: {},
   },
+  card: {
+    destaque: true
+  }
 };

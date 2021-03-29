@@ -13,7 +13,10 @@ export default function Cabecalho() {
   return (
     <Header>
       <Logo/>
-      <NavBar/>
+      <NavBar opcoes={{
+        about: 'Sobre mim',
+        contact: 'Contato'
+      }}/>
     </Header>
-  )
+  );
 }

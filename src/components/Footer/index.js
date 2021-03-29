@@ -8,24 +8,25 @@ const Footer = styled.footer`
 `;
 
 const Option = styled.a`
-  margin: 5px;
+  margin: 15px;
   font-size: 3rem;
+  color: black;
 `;
 
-function RodapeIcon() {
+function RodapeIcon({}) {
   return (
     <div style={{backgroundColor: 'pink'}}>
       <Option 
         href="https://github.com/lucasdgimenez"
         target="_blank"
       >
-        <i class="fab fa-github"></i>
+        <i className="fab fa-github"></i>
       </Option>
       <Option 
         href="https://www.linkedin.com/in/lucasdgimenez/"
         target="_blank"
       >
-        <i class="fab fa-linkedin"></i>
+        <i className="fab fa-linkedin"></i>
       </Option>
     </div>
   )
@@ -34,7 +35,7 @@ function RodapeIcon() {
 export default function Cabecalho() {
   return (
     <Footer>
-      <RodapeIcon/>
+      <RodapeIcon />
     </Footer>
   )
 }

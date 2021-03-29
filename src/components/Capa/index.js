@@ -6,7 +6,7 @@ const CapaContainer = styled.section`
     return theme.primary.main.color;
   }};
   text-align: center;
-  height: 92vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -30,11 +30,11 @@ const Subtitulo = styled.p`
   background-color: pink;
 `
 
-export default function Capa() {
+export default function Capa({titulo, subtitulo}) {
   return (
     <CapaContainer>
-      <Titulo>Lucas Dias</Titulo>
-      <Subtitulo>Portfolio</Subtitulo>
+      <Titulo>{titulo}</Titulo>
+      <Subtitulo>{subtitulo}</Subtitulo>
     </CapaContainer>
   )
 }

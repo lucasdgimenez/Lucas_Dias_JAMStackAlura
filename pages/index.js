@@ -2,7 +2,7 @@ import React from 'react';
 import Cabecalho from '../src/components/Cabecalho';
 import Capa from '../src/components/Capa';
 import Footer from '../src/components/Footer';
-import WrapperProjeos from '../src/components/WrapperProjetos';
+import WrapperProjetos from '../src/components/WrapperProjetos';
 
 export default function Home() {
   return (
@@ -11,11 +11,13 @@ export default function Home() {
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'column',
-      justifyContent: 'space-between',
     }}>
-      <Capa/>
+      <Capa 
+        titulo="Lucas Dias"
+        subtitulo="Portfolio"/>
       <Cabecalho/>
-      <WrapperProjeos/>
+      <WrapperProjetos/>
+
       <Footer/>
     </div>
   )
