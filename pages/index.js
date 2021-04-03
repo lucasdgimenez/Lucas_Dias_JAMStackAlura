@@ -15,7 +15,12 @@ export default function Home() {
       <Capa 
         titulo="Lucas Dias"
         subtitulo="Portfolio"/>
-      <Cabecalho/>
+      <Cabecalho 
+        opcoes={{
+          about: 'Sobre mim',
+          contact: 'Contato'
+        }}
+      />
       <WrapperProjetos/>
 
       <Footer/>
