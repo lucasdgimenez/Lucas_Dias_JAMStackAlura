@@ -1,6 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import Head from "next/head"
-import {theme} from "../src/theme"
+import theme from "../src/theme"
 
 const GlobalStyle = createGlobalStyle`
  body {

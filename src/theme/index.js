@@ -1,15 +1,12 @@
-export const theme = {
+import {typographyVariants} from './typographyVariants';
+
+export const colors = {
   background: {
-    light: {
-      color: '#FFFFFF',
+    secondy: {
+      color: '#32A852',
     },
     main: {
-      color: '#F2F2F2',
-    },
-  },
-  borders: {
-    main: {
-      color: '#F1F1F1',
+      color: '#020D05',
     },
   },
   primary: {
@@ -18,26 +15,12 @@ export const theme = {
       contrastText: '#fff',
     },
   },
-  secondary: {
-    main: {
-      color: '#FB7B6B',
-      contrastText: '#fff',
-    },
-  },
-  tertiary: {
-    main: {
-      color: '#070C0E',
-      contrastText: '#fff',
-    },
-    light: {
-      color: '#88989E',
-      contrastText: '#fff',
-    },
-  },
   modes: {
     dark: {},
-  },
-  card: {
-    destaque: true
   }
 };
+
+export default {
+  colors,
+  typographyVariants
+}
