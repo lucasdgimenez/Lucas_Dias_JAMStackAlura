@@ -1,6 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {CardImage} from '../CardDestaque';
+import PropTypes from 'prop-types';
+import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
 
 const CardContent = styled.a`
   margin-right: 10px;
@@ -10,15 +12,17 @@ const CardContent = styled.a`
   border: 2px solid black;
   margin-bottom: 40px;
   border: 3px solid green;
-  @media only screen and (max-width: 600px) {
-    width: 370px;
-    img {
+  ${breakpointsMedia({
+    md: css`
+      width: 370px;
+      img {
       height: 290px;
     }
-    h1 {
-      margin-bottom: 7px;
-    }
-  }
+    `,
+    lg: css`
+      width: 290px;
+    `
+  })}
 `
 
 export const CardTitle = styled.h1`
@@ -34,10 +38,12 @@ export const CardTitle = styled.h1`
   margin-top: 4px;
   margin: 0;
   padding: 10px;
-  @media only screen and (max-width: 600px) {
-    margin-bottom: 8px;
-    padding: 10px;
-  }
+  ${breakpointsMedia({
+    md: css`
+      margin-bottom: 8px;
+      padding: 10px;
+    `
+  })}
 `
 
 export default function Card({image, title, href}) {
@@ -64,3 +70,9 @@ export default function Card({image, title, href}) {
     </CardContent>    
   );
 }
+
+Card.propTypes = {
+  image: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+};
