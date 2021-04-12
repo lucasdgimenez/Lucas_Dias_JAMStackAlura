@@ -1,21 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import { CardTitle } from '../Card';
+import PropTypes from 'prop-types';
+import { breakpointsMedia } from '../../theme/utils/breakpointsMedia';
 
 const CardDestaqueContent = styled.a`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  max-width: 900px;
   margin: 0 auto;
   border: 3px solid green;
   margin-bottom: 20px;
-  @media only screen and (max-width: 600px) {
-    flex-direction: column;
-    max-width: 380px;
-    order: 1;
-  }
-`
+  ${breakpointsMedia({
+    md: css`
+      flex-direction: column;
+      max-width: 380px;    
+    `,
+    lg: css`
+      flex-direction: row;
+      max-width: 890px;
+    `,
+  })};
+`;
 
 export const CardImage = styled.div`
   flex: 2; 
@@ -56,3 +62,9 @@ export default function CardDestaque({title, text}) {
   </CardDestaqueContent>
   );
 }
+
+
+CardDestaque.propTypes = {
+  titulo: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};

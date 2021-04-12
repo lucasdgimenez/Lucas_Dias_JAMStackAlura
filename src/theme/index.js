@@ -22,5 +22,9 @@ export const colors = {
 
 export default {
   colors,
+  breakpoints: {
+    md: 500, // medium
+    lg: 600, // large
+  },
   typographyVariants
 }

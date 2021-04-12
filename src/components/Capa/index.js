@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const CapaContainer = styled.section`
   background-color: #020d05;
@@ -32,3 +33,8 @@ export default function Capa({titulo, subtitulo}) {
     </CapaContainer>
   )
 }
+
+Capa.propTypes = {
+  titulo: PropTypes.string.isRequired,
+  subtitulo: PropTypes.string.isRequired,
+};
